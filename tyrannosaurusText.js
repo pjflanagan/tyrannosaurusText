@@ -23,13 +23,13 @@ function Text(c){
 		for(var i = 0; i<len; i++){
 			string = this.getString(i);
 			sizeable = this.insertP(string).join("");
-			document.getElementsByClassName(this.class)[i].innerHTML = "<div class='TyrannosaurusText'>" + sizeable + "</div>";
+			document.getElementsByClassName(this.class)[i].innerHTML = "<div class='TyrannosaurusText' id='TyrannosaurusText-" + i +"'>" + sizeable + "</div>";
 		} 
 		for(var i = 0; i<N; i++){
 			this.setSize(i);
 			//this.setMarginTop(i);
 		}
-		this.verticalAlign();
+		//this.verticalAlign();
 		return;
 	}
 
@@ -63,18 +63,22 @@ function Text(c){
 		prev_height = span_prev.offsetHeight;
 		span.style.top = 0;//prev_height;
 		span.style.marginTop = 0;prev_height;
-	}*/
+	}
 
 	this.verticalAlign = function(){
 		var TREX = document.getElementsByClassName("TyrannosaurusText");
 		for(var i = 0; i<TREX.length; i++){
 			var line = TREX[i].getElementsByClassName("Saurus");
-			var total_height = 0;
-			for(var j = 0; j<line.length; j++){
-				total_height += line[j].offsetHeight;
-			}
-			TREX[i].style.top = this.height/2-total_height/2;
+
+			var total_height = TREX[i].offsetHeight;
+
+			id = line[line.length-1].getAttribute("id");
+			total_height -= document.getElementById(id).offsetTop;
+			//total_height += document.getElementById(id).style.fontSize;
+			
+			TREX[i].style.top = this.height/2 - total_height/2;
 		} 
 	}
+	*/
 
 }
