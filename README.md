@@ -6,8 +6,8 @@ Specifically, it automatically makes words the same width by selecting the font 
 CSS requres two classes be defined and then optional id's that are attached to the classes.
 ```
 .tyrannosaurusText {
-			position: relative;
-	}
+	position: relative;
+}
 #tyrannosaurusText-# { top: #px; }
 .Saurus {
 	white-space: nowrap;
