@@ -4,7 +4,8 @@ function Text(c){
 	//set font to really large by default
 
 	this.class = c;
-	this.width = 200//document.getElementsByClassName(this.class)[0].style.width;
+	this.width = 200;//document.getElementsByClassName(this.class)[0].style.width;
+	this.height = 200;
 	/*this.all_caps = false;
 	this.avoid_overflow = true; //true by default
 	this.line_height_gap = 2; //2 by default
@@ -26,8 +27,9 @@ function Text(c){
 		} 
 		for(var i = 0; i<N; i++){
 			this.setSize(i);
-			this.setMarginTop(i);
+			//this.setMarginTop(i);
 		}
+		this.verticalAlign();
 		return;
 	}
 
@@ -53,29 +55,26 @@ function Text(c){
 		return;
 	}
 
+	/*
 	this.setMarginTop = function(id){
 		if(id==0)return;
 		span = document.getElementById("Saurus-"+id);
 		span_prev = document.getElementById("Saurus-"+(id-1));
 		prev_height = span_prev.offsetHeight;
-		span.style.top = 0;
-		span.style.marginTop = prev_height;
+		span.style.top = 0;//prev_height;
+		span.style.marginTop = 0;prev_height;
+	}*/
+
+	this.verticalAlign = function(){
+		var TREX = document.getElementsByClassName("TyrannosaurusText");
+		for(var i = 0; i<TREX.length; i++){
+			var line = TREX[i].getElementsByClassName("Saurus");
+			var total_height = 0;
+			for(var j = 0; j<line.length; j++){
+				total_height += line[j].offsetHeight;
+			}
+			TREX[i].style.top = this.height/2-total_height/2;
+		} 
 	}
 
-	/*
-	function verticalAlign(){
-
-	}
-
-
-	/*
-	*/
 }
-
-
-/*
-square = new Text("class");
-square.width = 200; //px
-square.line_height_gap = 2; //px
-square.set();
-*/

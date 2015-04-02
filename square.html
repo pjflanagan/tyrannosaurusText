@@ -7,24 +7,26 @@
 	<script type="text/javascript" src="tyrannosaurusText.js"></script>
 	<style>
 		.square {
-			width:300px;
-			height:300px;
+			width:400px;
+			height:400px;
 			background: #000;
 			color: #FFF;
 			font-family: Montserrat;
 			text-align: center;
 		}
-
+		.tyrannosaurusText {
+			position: relative;
+		}
 		.Saurus {
 			white-space: nowrap;
-			position:absolute;
+			position: relative;
 		}
 	</style>
 	<script>
 		window.onload = function(){
 			var square = new Text("square");
-		//	square.width = 260; //px
-		//	square.line_height_gap = 2; //px
+			square.width = 180; //px
+			square.height = 400;
 			square.set();
 		}
 	</script>
