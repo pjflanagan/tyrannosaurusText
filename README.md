@@ -19,9 +19,9 @@ CSS requres two classes be defined and then optional id's that are attached to t
 JS requires you to define the class, set the width of the text in pixels, and then run .set() when ready.
 ```
 window.onload = function(){
-			var square = new Text("square");
-			square.width = 180; //px
-			square.set();
+	var square = new Text("square");
+	square.width = 180; //px
+	square.set();
 }
 ```
 HTML only needs the class and then the text written out.
