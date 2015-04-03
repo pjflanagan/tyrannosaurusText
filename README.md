@@ -1,30 +1,26 @@
 # tyrannosaurusText
-Tyrannosaurus Text offers more font alignment and sizing options than css alone.
-Specifically, it automatically makes words the same width by selecting the font size for you.
+Tyrannosaurus Text offers a quick fix to make your html words mono-width to give text a solid blocky appearance.
 
 #Usage
-CSS requres two classes be defined and then optional id's that are attached to the classes.
+##HTML 
+In the <head> tag, link to the style sheet and the js code. 
+Then in the <body> all you have to do is write the text you need in the <div> you want to have mono-width text
 ```
-.tyrannosaurusText {
-	position: relative;
-}
-#tyrannosaurusText-# { top: #px; }
-.Saurus {
-	white-space: nowrap;
-	position: relative;
-	margin: 0;
-}
-#Saurus-# { top: #px; }
+<script type="text/javascript" src="tyrannosaurusText.js"></script>
+<link rel="stylesheet" type="text/css" href="tyrannosaurusText.css">
+
+<div class="square">TYRANNOSAURUS TEXT</div>
 ```
-JS requires you to define the class, set the width of the text in pixels, and then run .set() when ready.
+##JS
+In the <script> tag or .js file you are using. all you have to do is call tText() and pass it the class name of the text you want to modify and width you want the text to be.
 ```
 window.onload = function(){
-	var square = new Text("square");
-	square.width = 180; //px
-	square.set();
+	new tText("class-name",width);
 }
 ```
-HTML only needs the class and then the text written out.
+##CSS
+TyrannosaurusText will automatically name your text blocks with ids TyrannosaurusText-# for each block of text, and Saurus-# for each line. All you have to do is subtract pixels until you find the gap in between each line that you want.
 ```
-<div class="square">TYRANNOSAURUS TEXT</div>
+#tyrannosaurusText-# { top: #-px; }
+#Saurus-# { top: #-px; }
 ```

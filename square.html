@@ -5,6 +5,7 @@
 	<link rel="icon" href="assets/favicon.ico">
 	<title>Square</title>
 	<script type="text/javascript" src="tyrannosaurusText.js"></script>
+	<link rel="stylesheet" type="text/css" href="tyrannosaurusText.css">
 	<style>
 		.square {
 			width:400px;
@@ -15,26 +16,18 @@
 			text-align: center;
 		}
 
-		.tyrannosaurusText {
-			position: relative;
-		}
 		#tyrannosaurusText-0{ top: 160px; }
-		#tyrannosaurusText-1{ top: 100px; }
-		.Saurus {
-			white-space: nowrap;
-			position: relative;
-			margin: 0;
-		}
-		#Saurus-1 { top:-17px; }
-		#Saurus-3 { top:-20px; }
-		#Saurus-4 { top:-40px; }
-		#Saurus-5 { top:-60px; }
+		#tyrannosaurusText-1{ top: 100px; } /*center whole body*/
+
+		#Saurus-1 { top:-17px; } /*Modify individual lines*/
+
+		#Saurus-3 { top:-18px; }
+		#Saurus-4 { top:-38px; }
+		#Saurus-5 { top:-68px; }
 	</style>
 	<script>
 		window.onload = function(){
-			var square = new Text("square");
-			square.width = 180; //px
-			square.set();
+			new tText("square",180).set();
 		}
 	</script>
 </head>
@@ -44,10 +37,10 @@
 
 <br/>
 
-<div class="square">EASILY MAKE SQUARE TEXT</div>
-<!--
+<div class="square">SEVENTY MILLION YEARS AGO</div>
+
 <br/>
 
-<div class="square">IT'S THIS SIMPLE</div>
--->
+<!--<div class="square">MASS EXTINCTION</div>-->
+
 </body></html>
