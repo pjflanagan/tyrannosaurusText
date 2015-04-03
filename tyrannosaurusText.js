@@ -11,7 +11,7 @@ function tText(c,w){
 
 		for(var i = 0; i<len; i++){
 			string = this.getString(i);
-			sizeable = this.insertP(string).join("");
+			sizeable = this.insertP(string).join("").replace(/_/g," ");
 			document.getElementsByClassName(this.class)[i].innerHTML = "<div class='TyrannosaurusText' id='TyrannosaurusText-" + i +"'>" + sizeable + "</div>";
 		} 
 		for(var i = 0; i<N; i++){
