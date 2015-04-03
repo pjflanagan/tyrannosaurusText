@@ -1,5 +1,6 @@
 # tyrannosaurusText
 ![alt tag](https://github.com/pjflanagan/tyrannosaurusText/blob/master/tText.png)
+
 Tyrannosaurus Text offers a quick fix to make your html words mono-width to give text a solid blocky appearance.
 
 #Usage
