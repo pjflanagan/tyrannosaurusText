@@ -4,7 +4,7 @@ Tyrannosaurus Text offers a quick fix to make your html words mono-width to give
 #Usage
 ##HTML 
 In the &lt;head&gt; tag, link to the style sheet and the js code. 
-Then in the &lt;body&gt; all you have to do is write the text you need in the <div> you want to have mono-width text
+Then in the &lt;body&gt; all you have to do is write the text you need in the &lt;div&gt; you want to have mono-width text
 ```
 <script type="text/javascript" src="tyrannosaurusText.js"></script>
 <link rel="stylesheet" type="text/css" href="tyrannosaurusText.css">
