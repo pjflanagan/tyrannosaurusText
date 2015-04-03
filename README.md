@@ -9,7 +9,7 @@ Then in the &lt;body&gt; all you have to do is write the text you need in the &l
 <script type="text/javascript" src="tyrannosaurusText.js"></script>
 <link rel="stylesheet" type="text/css" href="tyrannosaurusText.css">
 
-<div class="square">TYRANNOSAURUS TEXT</div>
+<div class="class-name">TYRANNOSAURUS TEXT</div>
 ```
 ##JS
 In the &lt;script&gt; tag or .js file you are using, all you have to do is call tText() and pass it the class name of the text you want to modify and width you want the text to be.
