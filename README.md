@@ -15,10 +15,10 @@ Then in the &lt;body&gt; all you have to do is write the text you need in the &l
 ##JS
 In the &lt;script&gt; tag or .js file you are using, all you have to do is call tText() and pass it the class name of the text you want to modify and width you want the text to be.
 ```
-new tText("class-name",width);
+new tText("class-name",width).set();
 
 ```
-after that tyrannosaurusText will make one word lines of the width you specified.
+After that tyrannosaurusText will make one word lines of the width you specified.
 ##CSS (optional)
 Then, so you can choose to clean things up, tyrannosaurusText will automatically name your text blocks with ids TyrannosaurusText-# for each block of text, and Saurus-# for each line. If you chose to, subtract pixels until you find the gap in between each line that you want.
 ```
